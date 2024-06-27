@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import * as Loader from 'react-loader-spinner'
 import Navbar from "../Navbar";
 import {
   BlogDetailContainer,
@@ -13,6 +14,7 @@ import {
   Label,
   Input,
   Textarea,
+  LoaderContainer,
 } from "./styledComponents";
 
 const apiConstraints = {
@@ -217,9 +219,15 @@ const BlogDetails = () => {
   );
 
   const renderLoading = () => (
-    <div>
-      <h1>Loading...</h1>
-    </div>
+    <LoaderContainer>
+      <Loader.TailSpin
+        visible={true}
+        height={80}
+        width={80}
+        color='skyblue'
+        ariaLabel='tail-spin-loading'
+      />
+    </LoaderContainer>
   );
 
   const renderBlog = () => {

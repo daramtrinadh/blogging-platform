@@ -106,4 +106,9 @@ export const Textarea = styled.textarea`
   margin-top: 5px;
   resize: vertical;
 `;
-
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+`;
